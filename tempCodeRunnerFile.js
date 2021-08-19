@@ -19,3 +19,6 @@ if (sum <= 20) {
   console.log("You're out of the game!");
   isAlive = false;
 }
+
+console.log(hasBlackJack);
+console.log(isAlive);
