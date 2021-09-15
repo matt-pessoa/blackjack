@@ -15,20 +15,20 @@ let message = '';
 const startBtn = document.getElementById('start-btn');
 const messageEl = document.querySelector('#message-el');
 const sumEl = document.getElementById('sum-el');
+const cardsEl = document.querySelector('#cards-el')
 
 startBtn.addEventListener('click', startGame);
 
 function startGame() {
+  sumEl.textContent = `Sum: ${sum}`;
+  cardsEl.textContent = `Cards: ${firstCard}, ${secondCard}`
   if (sum <= 20) {
     message = 'Do you want to draw a new card?';
-    sumEl.textContent = `Sum: ${sum}`;
   } else if (sum === 21) {
     message = "You've got Blackjack!";
-    sumEl.textContent = `Sum: ${sum}`;
     hasBlackJack = true;
   } else {
     message = "You're out of the game!";
-    sumEl.textContent = `Sum: ${sum}`;
     isAlive = false;
   }
   // 2. Display the message in the messageEl using messageEl.textContent
