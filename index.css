@@ -24,4 +24,17 @@ button {
   font-size: 50px;
   width: 500px;
   background-color: goldenrod;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(207, 158, 34);
+}
+
+button:active {
+  background-color: rgb(184, 140, 29);
 }
