@@ -30,7 +30,7 @@ const { playerName, chips } = {
 };
 
 const playerEl = document.getElementById('player-el');
-playerEl.textContent = `${playerName}: ${chips}`;
+playerEl.textContent = `${playerName}: $${chips}`;
 
 startBtn.addEventListener('click', startGame);
 newCardBtn.addEventListener('click', newCard);
@@ -62,6 +62,7 @@ function renderGame() {
 
 function startGame() {
   isAlive = true;
+  hasBlackJack = false;
   let firstCard = getRandomCard();
   let secondCard = getRandomCard();
   cardsArray = [firstCard, secondCard];
