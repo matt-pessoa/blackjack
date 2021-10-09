@@ -1,0 +1,41 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  background-image: url('images/table.png');
+  background-size: cover;
+}
+
+h1 {
+  color: goldenrod;
+  font-size: 90px;
+}
+
+#message-el {
+  font-style: italic;
+}
+
+button {
+  color: #016f32;
+  font-weight: bold;
+  font-size: 50px;
+  width: 500px;
+  background-color: goldenrod;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(207, 158, 34);
+}
+
+button:active {
+  background-color: rgb(184, 140, 29);
+}
