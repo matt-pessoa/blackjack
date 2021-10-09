@@ -24,6 +24,14 @@ const sumEl = document.getElementById('sum-el');
 const cardsEl = document.querySelector('#cards-el');
 const newCardBtn = document.getElementById('new-card-btn');
 
+const { playerName, chips } = {
+  playerName: 'Matt',
+  chips: 145,
+};
+
+const playerEl = document.getElementById('player-el');
+playerEl.textContent = `${playerName}: ${chips}`;
+
 startBtn.addEventListener('click', startGame);
 newCardBtn.addEventListener('click', newCard);
 
@@ -63,7 +71,7 @@ function startGame() {
 }
 
 function newCard() {
-  if (isAlive && !hasBlackJack) {
+  if (isAlive === true && hasBlackJack === false) {
     const newCard = getRandomCard();
     cardsArray.push(newCard);
 
