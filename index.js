@@ -1,11 +1,18 @@
-function getRandomNumber(min, max) {
-  // ! [min, max[
-  let getRandom = Math.floor(Math.random() * (max - min) + min);
-  return getRandom;
+function getRandomCard() {
+  // ! [min, max[ | includes min and does not includes max
+  let getRandom = Math.floor(Math.random() * 13) + 1; // Math.floor removes the decimals
+
+  if (getRandom === 1) {
+    return 11;
+  } else if (getRandom > 10) {
+    return 10;
+  } else {
+    return getRandom;
+  }
 }
 
-let firstCard = getRandomNumber(2, 12);
-let secondCard = getRandomNumber(2, 12);
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 const cardsArray = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -50,7 +57,7 @@ function startGame() {
 }
 
 function newCard() {
-  const newCard = getRandomNumber(2, 12);
+  const newCard = getRandomCard();
   cardsArray.push(newCard);
 
   sum += newCard;
