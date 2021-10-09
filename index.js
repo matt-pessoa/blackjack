@@ -63,10 +63,12 @@ function startGame() {
 }
 
 function newCard() {
-  const newCard = getRandomCard();
-  cardsArray.push(newCard);
+  if (isAlive && !hasBlackJack) {
+    const newCard = getRandomCard();
+    cardsArray.push(newCard);
 
-  sum += newCard;
+    sum += newCard;
 
-  renderGame();
+    renderGame();
+  }
 }
