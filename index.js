@@ -18,10 +18,10 @@ const sumEl = document.getElementById('sum-el');
 const cardsEl = document.querySelector('#cards-el');
 const newCardBtn = document.getElementById('new-card-btn');
 
-startBtn.addEventListener('click', startGame);
+startBtn.addEventListener('click', renderGame);
 newCardBtn.addEventListener('click', newCard);
 
-function startGame() {
+function renderGame() {
   sumEl.textContent = `Sum: ${sum}`;
   cardsEl.textContent = `Cards: ${firstCard}, ${secondCard}`;
   if (sum <= 20) {
@@ -37,8 +37,12 @@ function startGame() {
   messageEl.textContent = message;
 }
 
+function startGame() {
+  renderGame();
+}
+
 function newCard() {
   const newCardValue = getRandomNumber(2, 12);
   sum += newCardValue;
-  startGame();
+  renderGame();
 }
