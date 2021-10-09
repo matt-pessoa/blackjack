@@ -38,5 +38,7 @@ function startGame() {
 }
 
 function newCard() {
-  console.log('Drawing new card from the deck!');
+  const newCardValue = getRandomNumber(2, 12);
+  sum += newCardValue;
+  startGame();
 }
